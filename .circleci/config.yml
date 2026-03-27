@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Deploy to EC2
           command: |
-            ssh -o StrictHostKeyChecking=no ubuntu@<EC2-PUBLIC-IP> "
+            ssh -o StrictHostKeyChecking=no ubuntu@13.201.135.10 "
               cd /var/www/html &&
               git pull origin main &&
               sudo systemctl restart nginx
